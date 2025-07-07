@@ -3,6 +3,7 @@ module github.com/sajad-dev/gingo
 go 1.24.4
 
 require (
+	github.com/fatih/color v1.18.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
