@@ -1,4 +1,4 @@
-module github.com/sajad-dev/gingo
+module github.com/sajad-dev/gingo-cli
 
 go 1.24.4
 

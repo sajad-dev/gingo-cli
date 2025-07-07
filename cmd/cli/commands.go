@@ -4,8 +4,8 @@ import (
 	"os"
 
 	"github.com/fatih/color"
-	"github.com/sajad-dev/gingo/internal/commad/newpr"
-	"github.com/sajad-dev/gingo/internal/commad/versions"
+	"github.com/sajad-dev/gingo-cli/internal/commad/newpr"
+	"github.com/sajad-dev/gingo-cli/internal/commad/versions"
 	"github.com/spf13/cobra"
 )
 

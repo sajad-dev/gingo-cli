@@ -3,7 +3,7 @@ package cli
 import (
 	"os"
 
-	"github.com/sajad-dev/gingo/internal/config"
+	"github.com/sajad-dev/gingo-cli/internal/config"
 	"github.com/spf13/cobra"
 )
 
