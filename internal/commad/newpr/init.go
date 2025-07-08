@@ -38,7 +38,7 @@ func cloneProject(version string, projectName string) (string, error) {
 	return dir, nil
 }
 
-func changePackege(path string, repo string) error {
+func changeRepo(path string, repo string) error {
 	pattern := `github\.com\/sajad-dev\/gingo\/`
 	replacement := fmt.Sprintf("%s/", repo)
 
@@ -113,9 +113,8 @@ func Init(cmd *cobra.Command, args []string) error {
 		color.Red(err.Error())
 		return err
 	}
-	// path := "/home/sajad/Documents/Programming/gingo-framework/gingo-cli/x"
-	fmt.Println(path, repo)
-	err = changePackege(path, repo)
+
+	err = changeRepo(path, repo)
 	if err != nil {
 		color.Red(err.Error())
 		return err
