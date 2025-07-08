@@ -3,7 +3,6 @@ package cli
 import (
 	"os"
 
-	"github.com/fatih/color"
 	"github.com/sajad-dev/gingo-cli/internal/commad/newpr"
 	"github.com/sajad-dev/gingo-cli/internal/commad/versions"
 	"github.com/spf13/cobra"
@@ -15,10 +14,9 @@ var CommandsList []*Commands = []*Commands{
 			Use:   "new",
 			Short: "initialize new module in current directory",
 			Run: func(cmd *cobra.Command, args []string) {
-				if err := newpr.Init(); err != nil {
-					os.Exit(1)
+				if err := newpr.Init(cmd, args); err != nil {
+					os.Exit(0)
 				}
-				color.Green("Sucssfuly create project :) - ;)")
 			},
 		},
 		Flags: []any{
@@ -39,20 +37,20 @@ var CommandsList []*Commands = []*Commands{
 		},
 		Flags: []any{},
 	},
-	{
-		Command: &cobra.Command{
-			Use:   "install [modules...]",
-			Short: "Install one or more modules",
-			Run: func(cmd *cobra.Command, args []string) {
-				if err := newpr.Init(); err != nil {
-					os.Exit(1)
-				}
-			},
-		},
-		Flags: []any{
-			FlagString{Flag: "version", ShortFlag: "v", Defualt: "latest", Discription: "The version of the template or framework to install (e.g., v1.2.3 or latest)."},
-		},
-	},
+	// {
+	// 	Command: &cobra.Command{
+	// 		Use:   "install [modules...]",
+	// 		Short: "Install one or more modules",
+	// 		Run: func(cmd *cobra.Command, args []string) {
+	// 			if err := newpr.Init(); err != nil {
+	// 				os.Exit(1)
+	// 			}
+	// 		},
+	// 	},
+	// 	Flags: []any{
+	// 		FlagString{Flag: "version", ShortFlag: "v", Defualt: "latest", Discription: "The version of the template or framework to install (e.g., v1.2.3 or latest)."},
+	// 	},
+	// },
 }
 
 type FlagString struct {
