@@ -1,0 +1,3 @@
+go >= v1.22
+gingo >= v0.1
+gingo-helper >= v0.1

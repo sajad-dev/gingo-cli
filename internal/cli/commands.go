@@ -3,8 +3,8 @@ package cli
 import (
 	"os"
 
-	"github.com/sajad-dev/gingo-cli/internal/commad/newpr"
-	"github.com/sajad-dev/gingo-cli/internal/commad/versions"
+	"github.com/sajad-dev/gingo-cli/internal/command/newpr"
+	"github.com/sajad-dev/gingo-cli/internal/command/versions"
 	"github.com/spf13/cobra"
 )
 
@@ -37,20 +37,7 @@ var CommandsList []*Commands = []*Commands{
 		},
 		Flags: []any{},
 	},
-	// {
-	// 	Command: &cobra.Command{
-	// 		Use:   "install [modules...]",
-	// 		Short: "Install one or more modules",
-	// 		Run: func(cmd *cobra.Command, args []string) {
-	// 			if err := newpr.Init(); err != nil {
-	// 				os.Exit(1)
-	// 			}
-	// 		},
-	// 	},
-	// 	Flags: []any{
-	// 		FlagString{Flag: "version", ShortFlag: "v", Defualt: "latest", Discription: "The version of the template or framework to install (e.g., v1.2.3 or latest)."},
-	// 	},
-	// },
+
 }
 
 type FlagString struct {
