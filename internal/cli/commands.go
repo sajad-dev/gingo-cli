@@ -20,8 +20,8 @@ var CommandsList []*Commands = []*Commands{
 			},
 		},
 		Flags: []any{
-			FlagString{Flag: "repo", ShortFlag: "r", Defualt: "", Discription: "The Git repository URL to use as a template. If omitted, the default template will be used."},
-			FlagString{Flag: "name", ShortFlag: "n", Defualt: "", Discription: "The name of the new project directory."},
+			FlagString{Flag: "repo", ShortFlag: "r", Defualt: "gingo-project", Discription: "The Git repository URL to use as a template. If omitted, the default template will be used."},
+			FlagString{Flag: "name", ShortFlag: "n", Defualt: "gingo-project", Discription: "The name of the new project directory."},
 			FlagString{Flag: "version", ShortFlag: "v", Defualt: "latest", Discription: "The version of the template or framework to install (e.g., v1.2.3 or latest)."},
 		},
 	},

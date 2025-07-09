@@ -35,6 +35,14 @@ func cloneProject(version string, projectName string) (string, error) {
 		return "", err
 	}
 
+	cmd = exec.Command("chmod", "+x", fmt.Sprintf("%s/gear", dir))
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	err = cmd.Run()
+	if err != nil {
+		return "", err
+	}
+
 	return dir, nil
 }
 
@@ -70,7 +78,7 @@ func changeRepo(path string, repo string) error {
 		}
 
 		var updated []byte
-		
+
 		if filepath.Ext(path) == ".mod" {
 			updated = reM.ReplaceAll(data, []byte(replacementM))
 		} else {
