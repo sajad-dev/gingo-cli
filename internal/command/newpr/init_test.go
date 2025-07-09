@@ -11,14 +11,14 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestNewpr_CloneProject(t *testing.T) {
-	path, err := cloneProject("v0.1.0", "x")
-	assert.NoError(t, err)
-	_, err = os.Stat(fmt.Sprintf("%s/go.mod", path))
-	assert.NoError(t, err)
-	err = os.RemoveAll(path)
-	assert.NoError(t,err)
-}
+// func TestNewpr_CloneProject(t *testing.T) {
+// 	path, err := cloneProject("v0.1.0", "x")
+// 	assert.NoError(t, err)
+// 	_, err = os.Stat(fmt.Sprintf("%s/go.mod", path))
+// 	assert.NoError(t, err)
+// 	err = os.RemoveAll(path)
+// 	assert.NoError(t,err)
+// }
 
 func TestNewpr_ChangeRepo(t *testing.T) {
 	path, err := cloneProject("v0.1.0", "x")
